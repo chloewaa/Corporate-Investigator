@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianHostile
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - 'Ask about '
+  - Agree to
+  topicOptions:
+  - Employees
+  - How she's feeling
+  playerLines:
+  - intent: 'Ask about '
+    topic: Employees
+    lineText: Which employees should I be looking into?
+  - intent: Agree to
+    topic: Employees
+    lineText: Ok, I'll look into them.
+  - intent: 'Ask about '
+    topic: How she's feeling
+    lineText: Are you feeling okay?
+  - intent: 'Agree to '
+    topic: How she's feeling
+    lineText: It's okay to feel bad sometimes, boss.
+  npcResponses:
+  - intent: 'Ask about '
+    topic: Employees
+    lineText: Jordan Cole and Avery Kane are the employees. They're snakes.
+  - intent: Agree to
+    topic: Employees
+    lineText: Don't you need more informtion? Are you even qualified to be doing
+      this?
+  - intent: 'Ask about '
+    topic: How she's feeling
+    lineText: 'That''s an inappropriate question. You''re here to do a job, not to
+      talk. '
+  - intent: 'Agree to '
+    topic: How she's feeling
+    lineText: I don't "feel bad" you weirdo. Someone leaked documents! That's why
+      you're here!
+  nextNodes:
+  - intent: 'Ask about '
+    topic: How she's feeling
+    nextNode: {fileID: 11400000, guid: e870a82bcf176ee468276861b49a3b71, type: 2}
+  - intent: 'Agree to '
+    topic: How she's feeling
+    nextNode: {fileID: 11400000, guid: e870a82bcf176ee468276861b49a3b71, type: 2}
+  - intent: Agree to
+    topic: Employees
+    nextNode: {fileID: 11400000, guid: e870a82bcf176ee468276861b49a3b71, type: 2}
+  - intent: 'Ask about '
+    topic: Employees
+    nextNode: {fileID: 11400000, guid: be67fc2fdb06a9549864d51e1ba46d99, type: 2}

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianStart
+  m_EditorClassIdentifier: 
+  nodeID: VivianStart
+  intentOptions:
+  - 'Greet '
+  - Be direct
+  topicOptions:
+  - Role
+  - Mission
+  playerLines:
+  - intent: 'Greet '
+    topic: Role
+    lineText: Morning, Vivian. Can you remind me of what you oversee here?
+  - intent: 'Greet '
+    topic: Mission
+    lineText: "Hi Vivian. What\u2019s your top\u2010priority goal right now? What
+      would you like me to do today?"
+  - intent: Be direct
+    topic: Role
+    lineText: "Vivian, what\u2019s your job title on this initiative?"
+  - intent: Be direct
+    topic: Mission
+    lineText: 'Cut to the chase: what am I supposed to fix first?'
+  npcResponses:
+  - intent: 'Greet '
+    topic: Role
+    lineText: 'It''s not a good morning at RivenCore. I head up data integrity across
+      all internal systems. '
+  - intent: 'Greet '
+    topic: Mission
+    lineText: My mission is to stop any leaks before they hit public servers. Obviously,
+      I've failed at that,  so I need you to find out who leaked sensitive documents.
+  - intent: Be direct
+    topic: Role
+    lineText: "I\u2019m the Director of Security: any breach, any error, lands on
+      me. This data leak has put my job on the line"
+  - intent: Be direct
+    topic: Mission
+    lineText: 'First task: peek at your local apps on your desktop. Then, I need
+      you to speak to the two suspected leakers: Jordan Cole and Avery Kane.'
+  nextNodes:
+  - intent: 'Greet '
+    topic: Role
+    nextNode: {fileID: 11400000, guid: f7620b7b41f8ede4b955f8816c509c1d, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: 'Greet '
+    topic: Mission
+    nextNode: {fileID: 11400000, guid: f7620b7b41f8ede4b955f8816c509c1d, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Be direct
+    topic: Role
+    nextNode: {fileID: 11400000, guid: f7620b7b41f8ede4b955f8816c509c1d, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Be direct
+    topic: Mission
+    nextNode: {fileID: 11400000, guid: f7620b7b41f8ede4b955f8816c509c1d, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

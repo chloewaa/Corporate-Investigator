@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianEnd
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - Clarify
+  - Thank for
+  topicOptions:
+  - Intentions
+  - Help
+  playerLines:
+  - intent: Clarify
+    topic: Intentions
+    lineText: Vivian, just to clarify, what are you hoping to learn from me?
+  - intent: Clarify
+    topic: Help
+    lineText: Can you clarify how I can best help catch the person who leaked the
+      data?
+  - intent: Thank for
+    topic: Intentions
+    lineText: Thanks for being upfront about what I need to do.
+  - intent: Thank for
+    topic: Help
+    lineText: Thank you for showing me exactly where to look, I'll dig into the apps
+      on this computer right away.
+  npcResponses:
+  - intent: Clarify
+    topic: Intentions
+    lineText: 'Are you dull? You need to figure out who leaked the data. '
+  - intent: Clarify
+    topic: Help
+    lineText: You need to speak to both of the suspects and use the files we've put
+      locally on your computer to catch them.
+  - intent: Thank for
+    topic: Intentions
+    lineText: Of course, use all of the files we've given you to try to catch them.
+  - intent: Thank for
+    topic: Help
+    lineText: Good. The faster we know who it is, the faster we can close the case.
+  nextNodes:
+  - intent: Clarify
+    topic: Intentions
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Clarify
+    topic: Help
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Thank for
+    topic: Intentions
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Thank for
+    topic: Help
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0

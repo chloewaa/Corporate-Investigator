@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: Vivian02
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - Ask About
+  - Challenge
+  topicOptions:
+  - Responsibility
+  - Employees
+  playerLines:
+  - intent: Ask About
+    topic: Responsibility
+    lineText: 'Who takes the fall if something goes wrong? '
+  - intent: Ask About
+    topic: Employees
+    lineText: 'Why do you suspect these two employees? Are there no other employees
+      or outside sources that could''ve gotten their hands on ther data? '
+  - intent: Challenge
+    topic: Responsibility
+    lineText: "If there\u2019s a breach, whose head rolls?"
+  - intent: Challenge
+    topic: Employees
+    lineText: 'Your people obviously dropped the ball, why do you still trust them
+      with sensitive info? '
+  npcResponses:
+  - intent: Ask About
+    topic: Responsibility
+    lineText: 'I own it. Now head to Emails and files and look for anything odd. '
+  - intent: Ask About
+    topic: Employees
+    lineText: I don't know them well, i just know that they were on the project.
+      You can look at their profiles on you computer to get more info.
+  - intent: Challenge
+    topic: Responsibility
+    lineText: 'My head, so let me know when you figure out who leaked the data. '
+  - intent: Challenge
+    topic: Employees
+    lineText: "Because they\u2019re professionals, and panicking won\u2019t solve
+      anything. Odds are it's one person, we just need to figure out who."
+  nextNodes:
+  - intent: Ask About
+    topic: Responsibility
+    nextNode: {fileID: 11400000, guid: f36515cae4c307c4facca10c1b5e8a05, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Ask About
+    topic: Employees
+    nextNode: {fileID: 11400000, guid: f36515cae4c307c4facca10c1b5e8a05, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Challenge
+    topic: Responsibility
+    nextNode: {fileID: 11400000, guid: f36515cae4c307c4facca10c1b5e8a05, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Challenge
+    topic: Employees
+    nextNode: {fileID: 11400000, guid: f36515cae4c307c4facca10c1b5e8a05, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

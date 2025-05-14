@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: AveryStart
+  m_EditorClassIdentifier: 
+  nodeID: AveryStart
+  intentOptions:
+  - 'Small Talk '
+  - Press
+  topicOptions:
+  - Greeting
+  - Leak Responsibility
+  playerLines:
+  - intent: 'Small Talk '
+    topic: Greeting
+    lineText: Good morning, Avery. Thanks for taking a moment to talk.
+  - intent: 'Small Talk '
+    topic: Leak Responsibility
+    lineText: "Hey Avery, hope you\u2019re having a good day. So, about that leak,
+      any clue how those documentss slipped out?"
+  - intent: Press
+    topic: Greeting
+    lineText: I'm not going to small talk you. Avery, we need to get straight to
+      why those documents went missing.
+  - intent: Press
+    topic: Leak Responsibility
+    lineText: So Avery, did anyone deliberitly leak those documents?
+  npcResponses:
+  - intent: 'Small Talk '
+    topic: Greeting
+    lineText: 'Oh, hi there! Good morning. Of course, happy to help however I can.
+      How are you settling in?
+
+'
+  - intent: 'Small Talk '
+    topic: Leak Responsibility
+    lineText: "Oh...um, thanks, I'm doing alright. The leak really caught us off-guard.
+      I haven\u2019t seen any signs of foul play."
+  - intent: Press
+    topic: Greeting
+    lineText: "Right, of course. I know this is serious. I\u2019m here to help. Ask
+      me whatever you want."
+  - intent: Press
+    topic: Leak Responsibility
+    lineText: "Oh, wow. I-look, I\u2019m not aware of anyone doing that on purpose.
+      If something slipped out, it was an honest mistake. Please believe me."
+  nextNodes:
+  - intent: 'Small Talk '
+    topic: Greeting
+    nextNode: {fileID: 11400000, guid: d197fdc741ff0a8469b92d10b98ed0f3, type: 2}
+    requiredTrust: 0
+    trustDelta: 15
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0
+  - intent: 'Small Talk '
+    topic: Leak Responsibility
+    nextNode: {fileID: 11400000, guid: d197fdc741ff0a8469b92d10b98ed0f3, type: 2}
+    requiredTrust: 0
+    trustDelta: 10
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0
+  - intent: Press
+    topic: Greeting
+    nextNode: {fileID: 11400000, guid: c0b98d8d22e821542811c05e8ac755b2, type: 2}
+    requiredTrust: 0
+    trustDelta: -10
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0
+  - intent: Press
+    topic: Leak Responsibility
+    nextNode: {fileID: 11400000, guid: c0b98d8d22e821542811c05e8ac755b2, type: 2}
+    requiredTrust: 0
+    trustDelta: -15
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0

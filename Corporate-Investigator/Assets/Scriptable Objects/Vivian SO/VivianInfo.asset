@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianInfo
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - 'Ask about '
+  - Gossip about
+  topicOptions:
+  - Data leak
+  - Employee history
+  playerLines:
+  - intent: 'Ask about '
+    topic: Data leak
+    lineText: You mentioned a data leak, when was the data leaked?
+  - intent: 'Ask about '
+    topic: Employee history
+    lineText: Do you have any information on the history of these employees?
+  - intent: Gossip about
+    topic: Data leak
+    lineText: 'Have you heard rumors about the data leak? Seems like information
+      is locked up tight. '
+  - intent: Gossip about
+    topic: Employee history
+    lineText: Have you heard anything about past employee situations?
+  npcResponses:
+  - intent: 'Ask about '
+    topic: Data leak
+    lineText: 'It was leaked a few days ago, but traced by to my department yesterday. '
+  - intent: 'Ask about '
+    topic: Employee history
+    lineText: I barely know either of them. They have profiles you can look at on
+      your own computer.
+  - intent: Gossip about
+    topic: Data leak
+    lineText: Well I really shouldn't talk about what it was exactly. All you need
+      to know is that it was bad...very bad.
+  - intent: Gossip about
+    topic: Employee history
+    lineText: 'They both have mostly clean records, but they''ve both been clear
+      about they''re disapproval of the company. '
+  nextNodes:
+  - intent: 'Ask about '
+    topic: Data leak
+    nextNode: {fileID: 11400000, guid: af2949eda20ec1b4d89839f14a13dd01, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: 'Ask about '
+    topic: Employee history
+    nextNode: {fileID: 11400000, guid: af2949eda20ec1b4d89839f14a13dd01, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Gossip about
+    topic: Data leak
+    nextNode: {fileID: 11400000, guid: af2949eda20ec1b4d89839f14a13dd01, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Gossip about
+    topic: Employee history
+    nextNode: {fileID: 11400000, guid: af2949eda20ec1b4d89839f14a13dd01, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

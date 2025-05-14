@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: Jordan1001
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - 'Challenge '
+  - Empathize
+  topicOptions:
+  - Competence
+  - Pressure
+  playerLines:
+  - intent: 'Challenge '
+    topic: Competence
+    lineText: "Would you say Avery really knows what she\u2019s doing?"
+  - intent: 'Challenge '
+    topic: Pressure
+    lineText: "Isn\u2019t this constant scrutiny slowing you down?"
+  - intent: Empathize
+    topic: Competence
+    lineText: Must be frustrating having to fix her oversights.
+  - intent: Empathize
+    topic: Pressure
+    lineText: I get that this is high-stakes, how do you cope?
+  npcResponses:
+  - intent: 'Challenge '
+    topic: Competence
+    lineText: "Let\u2019s be honest: she misses the obvious. I\u2019m here to pick
+      up her slack."
+  - intent: 'Challenge '
+    topic: Pressure
+    lineText: "Pressure is what separates pros from amateurs, Avery\u2019s still
+      learning."
+  - intent: Empathize
+    topic: Competence
+    lineText: "It\u2019d help if she knew the difference between noise and real alerts."
+  - intent: Empathize
+    topic: Pressure
+    lineText: "I thrive on it. She\u2026 panics at the first hiccup."
+  nextNodes:
+  - intent: 'Challenge '
+    topic: Competence
+    nextNode: {fileID: 11400000, guid: 44cb09e25e065784485a2f851ea8e716, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: 'Challenge '
+    topic: Pressure
+    nextNode: {fileID: 11400000, guid: 44cb09e25e065784485a2f851ea8e716, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Empathize
+    topic: Competence
+    nextNode: {fileID: 11400000, guid: 44cb09e25e065784485a2f851ea8e716, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Empathize
+    topic: Pressure
+    nextNode: {fileID: 11400000, guid: 44cb09e25e065784485a2f851ea8e716, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

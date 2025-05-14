@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: JordanClue01
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - Ask about
+  - Demand
+  topicOptions:
+  - Coworker information
+  - Work information
+  playerLines:
+  - intent: Ask about
+    topic: Coworker information
+    lineText: Seems like your department is rather small, do you get along well with
+      your coworkers?
+  - intent: Ask about
+    topic: Work information
+    lineText: Your work seems to be high intensity, do you enjoy it?
+  - intent: Demand
+    topic: Coworker information
+    lineText: "You\u2019re not the only one responsible here. Who else dropped the
+      ball?"
+  - intent: Demand
+    topic: Work information
+    lineText: Stop deflecting. What was in the leak, and why did it happen on your
+      watch?
+  npcResponses:
+  - intent: Ask about
+    topic: Coworker information
+    lineText: "We\u2019re civil enough, but make no mistake, inefficiency isn\u2019t
+      welcome here. If someone can\u2019t keep pace, I let them know."
+  - intent: Ask about
+    topic: Work information
+    lineText: "I thrive on it. If it weren\u2019t intense, I\u2019d find it boring,
+      and I don\u2019t have time to babysit anyone who can\u2019t keep up."
+  - intent: Demand
+    topic: Coworker information
+    lineText: "Avery set this whole chain in motion, she\u2019s the one flagging
+      false alarms and dragging us down. After that, it\u2019s anyone who didn\u2019t
+      double-check her work before it went live."
+  - intent: Demand
+    topic: Work information
+    lineText: Fine. The leak exposed our internal user directory and diagnostic logs.
+      It happened because that nightly export script ran unchecked after Avery green-lit
+      it without waiting for my sign-off.
+  nextNodes:
+  - intent: Ask about
+    topic: Coworker information
+    nextNode: {fileID: 11400000, guid: b9fea744dd1adb24a9ae4d9aaaf193fd, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Ask about
+    topic: Work information
+    nextNode: {fileID: 11400000, guid: b9fea744dd1adb24a9ae4d9aaaf193fd, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Demand
+    topic: Coworker information
+    nextNode: {fileID: 11400000, guid: b9fea744dd1adb24a9ae4d9aaaf193fd, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Demand
+    topic: Work information
+    nextNode: {fileID: 11400000, guid: b9fea744dd1adb24a9ae4d9aaaf193fd, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

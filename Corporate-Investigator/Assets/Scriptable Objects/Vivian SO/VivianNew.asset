@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianNew
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - Apologize
+  - Explain
+  topicOptions:
+  - You're new
+  - About what you said
+  playerLines:
+  - intent: Apologize
+    topic: You're new
+    lineText: I'm sorry, I'm new. I just need some more information.
+  - intent: Apologize
+    topic: About what you said
+    lineText: 'I''m sorry, I didn''t mean to offend you. '
+  - intent: Explain
+    topic: You're new
+    lineText: 'I''m new to the company, I just need some more information. '
+  - intent: Explain
+    topic: About what you said
+    lineText: 'I was trying to be nice. I will look into your employees. '
+  npcResponses:
+  - intent: Apologize
+    topic: You're new
+    lineText: I don't care. Can we discuss my employees now? The entire reason you're
+      here?
+  - intent: Apologize
+    topic: About what you said
+    lineText: 'I don''t care what you meant to do. Let''s stay on topic, you''re
+      not engaging. '
+  - intent: Explain
+    topic: You're new
+    lineText: 'I was better than that when I was new. Get you''re shit together,
+      this is serious. '
+  - intent: Explain
+    topic: About what you said
+    lineText: 'Being "nice" isn''t a behavior I commend. Lets stay on topic, you''re
+      here for a reason. '
+  nextNodes:
+  - intent: Apologize
+    topic: You're new
+    nextNode: {fileID: 11400000, guid: be67fc2fdb06a9549864d51e1ba46d99, type: 2}
+  - intent: Apologize
+    topic: About what you said
+    nextNode: {fileID: 11400000, guid: be67fc2fdb06a9549864d51e1ba46d99, type: 2}
+  - intent: Explain
+    topic: You're new
+    nextNode: {fileID: 11400000, guid: be67fc2fdb06a9549864d51e1ba46d99, type: 2}
+  - intent: Explain
+    topic: About what you said
+    nextNode: {fileID: 11400000, guid: be67fc2fdb06a9549864d51e1ba46d99, type: 2}

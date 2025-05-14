@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianStart
+  m_EditorClassIdentifier: 
+  nodeID: VivianStart
+  intentOptions:
+  - Say
+  - Ask about
+  topicOptions:
+  - Good Morning
+  - What you're doing today
+  playerLines:
+  - intent: Say
+    topic: Good Morning
+    lineText: 'Good morning, Vivian. '
+  - intent: Say
+    topic: What you're doing today
+    lineText: I'm invesitigating two of your employees today. I heard there's been
+      a data leak?
+  - intent: Ask about
+    topic: Good Morning
+    lineText: Has your morning been good?
+  - intent: Ask about
+    topic: What you're doing today
+    lineText: So, what am I doing for you today?
+  npcResponses:
+  - intent: Say
+    topic: Good Morning
+    lineText: If you can call it that. I need you to look into two of my employees.
+      We've had a data leak.
+  - intent: Say
+    topic: What you're doing today
+    lineText: Good, you know what you're doing. Ask any questions you may need, but
+      don't waste my time.
+  - intent: Ask about
+    topic: Good Morning
+    lineText: I'd rather not engage in small talk. I need you to look into two of
+      my employees.
+  - intent: Ask about
+    topic: What you're doing today
+    lineText: 'They really didn''t tell you? Typical. I need you to look into two
+      of my employees. '
+  nextNodes:
+  - intent: Say
+    topic: Good Morning
+    nextNode: {fileID: 11400000, guid: 85bdcff8809340446953856c468e6f75, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Say
+    topic: What you're doing today
+    nextNode: {fileID: 11400000, guid: 85bdcff8809340446953856c468e6f75, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Ask about
+    topic: What you're doing today
+    nextNode: {fileID: 11400000, guid: 85bdcff8809340446953856c468e6f75, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Ask about
+    topic: Good Morning
+    nextNode: {fileID: 11400000, guid: 85bdcff8809340446953856c468e6f75, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

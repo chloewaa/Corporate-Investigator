@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: AveryClue
+  m_EditorClassIdentifier: 
+  nodeID: AveryClue
+  intentOptions:
+  - 'Ask about '
+  - Request
+  topicOptions:
+  - 'Work enviroment '
+  - Data leak
+  playerLines:
+  - intent: 'Ask about '
+    topic: 'Work enviroment '
+    lineText: How do you and the team typically collaborate on sensitive projects
+      around here?
+  - intent: 'Ask about '
+    topic: Data leak
+    lineText: What do you know about how the files actually slipped out?
+  - intent: Request
+    topic: 'Work enviroment '
+    lineText: Could you show me an example of how important documents get distributed?
+  - intent: Request
+    topic: Data leak
+    lineText: Where can I actually find the leaked documents?
+  npcResponses:
+  - intent: 'Ask about '
+    topic: 'Work enviroment '
+    lineText: 'We keep everything in our Email system: every draft, comment, and
+      attachment is sent as a thread. Open the Email app and you can look at our
+      communications.'
+  - intent: 'Ask about '
+    topic: Data leak
+    lineText: I'm not entirely sure, honestly. Maybe someone emailed them to someone
+      outside the company? Maybe check the email app.
+  - intent: Request
+    topic: 'Work enviroment '
+    lineText: "Sure, launch the Email app and look for emails where we're talking
+      about a project. You\u2019ll find the latest memo; that\u2019s how we send
+      it around."
+  - intent: Request
+    topic: Data leak
+    lineText: You can find them in the file folder on your computer. I'm not sure
+      you'll have access to them, though. But you can check.
+  nextNodes:
+  - intent: 'Ask about '
+    topic: 'Work enviroment '
+    nextNode: {fileID: 11400000, guid: 77db697a23bc7e94aad459bc0d787f76, type: 2}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: 'Ask about '
+    topic: Data leak
+    nextNode: {fileID: 11400000, guid: 77db697a23bc7e94aad459bc0d787f76, type: 2}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Request
+    topic: 'Work enviroment '
+    nextNode: {fileID: 11400000, guid: 77db697a23bc7e94aad459bc0d787f76, type: 2}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Request
+    topic: Data leak
+    nextNode: {fileID: 11400000, guid: 77db697a23bc7e94aad459bc0d787f76, type: 2}
+    requiredTrust: 0
+    trustDelta: 5

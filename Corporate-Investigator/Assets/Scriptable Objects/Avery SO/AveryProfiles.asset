@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: AveryProfiles
+  m_EditorClassIdentifier: 
+  nodeID: AveryProfile
+  intentOptions:
+  - Ask about
+  - Challenge
+  topicOptions:
+  - Background
+  - Loyalty
+  playerLines:
+  - intent: Ask about
+    topic: Background
+    lineText: Avery, can you walk me through your history on this team?
+  - intent: Ask about
+    topic: Loyalty
+    lineText: "Given everything we\u2019ve seen, do you still support this company\u2019s
+      methods?"
+  - intent: Challenge
+    topic: Background
+    lineText: Do you really have the experience to call out these data practices?
+  - intent: Challenge
+    topic: Loyalty
+    lineText: "Your actions suggest you\u2019re torn, are you even loyal to your
+      colleagues?"
+  npcResponses:
+  - intent: Ask about
+    topic: Background
+    lineText: I joined Ops four years ago, starting in support and moving into analytics,
+      Phoenix was my first big lead.
+  - intent: Ask about
+    topic: Loyalty
+    lineText: "I\u2019m loyal to the people here, not the policies. My priority is
+      doing right by our users."
+  - intent: Challenge
+    topic: Background
+    lineText: "Experience isn\u2019t just tenure, it\u2019s asking the hard questions.
+      I\u2019ve been in the trenches long enough to know when something\u2019s wrong."
+  - intent: Challenge
+    topic: Loyalty
+    lineText: "I serve the team\u2019s integrity, if that makes me disloyal to certain
+      corporate practices, so be it."
+  nextNodes:
+  - intent: Ask about
+    topic: Background
+    nextNode: {fileID: 11400000, guid: e156fb6477f62e641a758f12606b8a7f, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Ask about
+    topic: Loyalty
+    nextNode: {fileID: 11400000, guid: e156fb6477f62e641a758f12606b8a7f, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Challenge
+    topic: Background
+    nextNode: {fileID: 11400000, guid: e156fb6477f62e641a758f12606b8a7f, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Challenge
+    topic: Loyalty
+    nextNode: {fileID: 11400000, guid: e156fb6477f62e641a758f12606b8a7f, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: AveryDistrust
+  m_EditorClassIdentifier: 
+  nodeID: AveryDistrust
+  intentOptions:
+  - Press
+  - Apologize
+  topicOptions:
+  - Demand truth
+  - Make amends
+  playerLines:
+  - intent: Press
+    topic: Demand truth
+    lineText: "I\u2019m not buying it yet, you need to tell me the truth, Avery.
+      Tell me exactly how that file got out."
+  - intent: Press
+    topic: Make amends
+    lineText: "Alright, Avery. Look, I know I\u2019ve been tough. I do appreciate
+      you helping me here. Can you point me to any helpful clues?"
+  - intent: Apologize
+    topic: Demand truth
+    lineText: "I\u2019m sorry if I\u2019m coming down harshly\u2026 it\u2019s just
+      critical. Please tell me exactly how those files ended up on in the hands of
+      a journalist."
+  - intent: Apologize
+    topic: Make amends
+    lineText: "I\u2019m sorry, Avery. I owe you an apology, I do appreciate your
+      help."
+  npcResponses:
+  - intent: Press
+    topic: Demand truth
+    lineText: 'I''m being honest with you! I''m trying to help you out here, i know
+      you have an important job. '
+  - intent: Press
+    topic: Make amends
+    lineText: 'Thank you for saying that. I can try to help you if you want, just
+      ask me some questions. '
+  - intent: Apologize
+    topic: Demand truth
+    lineText: I understand, I'd feel the same if I were you. Ask me some questions
+      and I'll answer the best I can.
+  - intent: Apologize
+    topic: Make amends
+    lineText: "Thank you\u2026 I know this is stressful. I really want to help you
+      get to the bottom of this. "
+  nextNodes:
+  - intent: Press
+    topic: Demand truth
+    nextNode: {fileID: 11400000, guid: 6c878f2e7e5bc8544acb1e8e60095eaa, type: 2}
+    requiredTrust: 0
+    trustDelta: -20
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0
+  - intent: Press
+    topic: Make amends
+    nextNode: {fileID: 11400000, guid: d197fdc741ff0a8469b92d10b98ed0f3, type: 2}
+    requiredTrust: 0
+    trustDelta: 10
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0
+  - intent: Apologize
+    topic: Demand truth
+    nextNode: {fileID: 11400000, guid: d197fdc741ff0a8469b92d10b98ed0f3, type: 2}
+    requiredTrust: 0
+    trustDelta: 10
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0
+  - intent: Apologize
+    topic: Make amends
+    nextNode: {fileID: 11400000, guid: d197fdc741ff0a8469b92d10b98ed0f3, type: 2}
+    requiredTrust: 0
+    trustDelta: 20
+    requiresProjectPhoenix: 0
+    requiresEmails: 0
+    requiresAccessLog: 0
+    requiresProfiles: 0

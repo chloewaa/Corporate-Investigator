@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianInfo 1
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - Inquire
+  - 'Express concern '
+  topicOptions:
+  - About clues
+  - About navigation
+  playerLines:
+  - intent: Inquire
+    topic: About clues
+    lineText: Have you found any clue about who may have leaked the data?
+  - intent: Inquire
+    topic: About navigation
+    lineText: I have a RivenCore computer. Do I have access to anything of interest?
+  - intent: 'Express concern '
+    topic: About clues
+    lineText: You haven't brought up any clues, has the company found any?
+  - intent: 'Express concern '
+    topic: About navigation
+    lineText: There doesn't seem to be a lot of things on my computer, what can I
+      look at?
+  npcResponses:
+  - intent: Inquire
+    topic: About clues
+    lineText: 'The company has two suspects who were both involved directly on the
+      project. You can access clues locally through the apps on your computer. '
+  - intent: Inquire
+    topic: About navigation
+    lineText: 'IT has located files of interest, recent sent emails, and the employee
+      profiles that you can access locally. '
+  - intent: 'Express concern '
+    topic: About clues
+    lineText: 'IT has found a few "clues", or what they believe may be clues. You
+      can access them locally through the apps on your computer. '
+  - intent: 'Express concern '
+    topic: About navigation
+    lineText: 'Well, you don''t need to be surfing the web, you''re working. You
+      can access information of interest locally through the apps on your computer. '
+  nextNodes:
+  - intent: Inquire
+    topic: About clues
+    nextNode: {fileID: 11400000, guid: 5b0089adcf2b95b4eadc29257da85265, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Inquire
+    topic: About navigation
+    nextNode: {fileID: 11400000, guid: 5b0089adcf2b95b4eadc29257da85265, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: 'Express concern '
+    topic: About clues
+    nextNode: {fileID: 11400000, guid: 5b0089adcf2b95b4eadc29257da85265, type: 2}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: 'Express concern '
+    topic: About navigation
+    nextNode: {fileID: 11400000, guid: 5b0089adcf2b95b4eadc29257da85265, type: 2}
+    requiredTrust: 0
+    trustDelta: 0

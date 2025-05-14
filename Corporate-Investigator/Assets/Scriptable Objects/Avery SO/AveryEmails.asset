@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: AveryEmails
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - Ask about
+  - Clarify
+  - Challenge
+  topicOptions:
+  - Jordan behavior
+  - Project Phoenix
+  - Data access
+  playerLines:
+  - intent: Ask about
+    topic: Jordan behavior
+    lineText: "I\u2019ve seen Jordan\u2019s emails, he seems pretty dismissive of
+      you. Is he always like that?"
+  - intent: Ask about
+    topic: Project Phoenix
+    lineText: "I hear Phoenix is scooping up everybody\u2019s personal records, does
+      that sit right with you?"
+  - intent: Ask about
+    topic: Data access
+    lineText: You asked IT for extra permissions, what were you really looking for?
+  - intent: Clarify
+    topic: Jordan behavior
+    lineText: "When Jordan said you should \u2018stick to your lane,\u2019 what did
+      he mean?"
+  - intent: Clarify
+    topic: Project Phoenix
+    lineText: "Can you clarify what you mean by \u2018we crossed a privacy line\u2019?"
+  - intent: Clarify
+    topic: Data access
+    lineText: "I\u2019m fuzzy on one thing: why did you need extra permissions?"
+  - intent: Challenge
+    topic: Jordan behavior
+    lineText: Why does Jordan keep barking orders instead of collaborating?
+  - intent: Challenge
+    topic: Project Phoenix
+    lineText: "If Phoenix was really about \u2018insights,\u2019 why harvest all
+      this personal info?"
+  - intent: Challenge
+    topic: Data access
+    lineText: You wanted full data rights, seems like you were hiding something.
+      Spill it.
+  npcResponses:
+  - intent: Ask about
+    topic: Jordan behavior
+    lineText: "Jordan\u2019s under pressure to hit deadlines, but that\u2019s no
+      excuse for snapping. I try not to take it personally\u2026 though sometimes
+      I wonder if he\u2019s just embarrassed to admit he needs help."
+  - intent: Ask about
+    topic: Project Phoenix
+    lineText: "I get uncomfortable, too. We told ourselves it was for \u2018better
+      insights,\u2019 but collecting so much data\u2026 it doesn\u2019t feel ethical.
+      I kept pushing to anonymize it, but my concerns got lost in the shuffle."
+  - intent: Ask about
+    topic: Data access
+    lineText: "Honestly, I wanted to double-check that nobody\u2019s sensitive info
+      was exposed. I\u2019ve seen leaks before; my gut was telling me we needed an
+      extra look at the logs."
+  - intent: Clarify
+    topic: Jordan behavior
+    lineText: "He meant that as a joke, well, a terrible joke. He thinks I\u2019m
+      overstepping by asking too many questions. I guess he\u2019s worried I\u2019ll
+      find something he doesn\u2019t want anyone to see."
+  - intent: Clarify
+    topic: Project Phoenix
+    lineText: "We started pulling location histories, contact networks\u2026 stuff
+      people never signed off on sharing. It seemed harmless at first, but now I
+      see how invasive it really got."
+  - intent: Clarify
+    topic: Data access
+    lineText: "Honestly, I wanted to double-check that nobody\u2019s sensitive info
+      was exposed. I\u2019ve seen leaks before; my gut was telling me we needed an
+      extra look at the logs."
+  - intent: Challenge
+    topic: Jordan behavior
+    lineText: "He\u2019s got an old-school view: control from the top. I call him
+      out sometimes, but he digs in his heels. It\u2019s part of why I worry he\u2019d
+      rather sweep uncomfortable truths under the rug."
+  - intent: Challenge
+    topic: Project Phoenix
+    lineText: "Good question. After budget cuts, it wasn\u2019t about insights, it
+      was covering up mistakes. We needed more leverage over clients, so we made
+      the data bigger, not better."
+  - intent: Challenge
+    topic: Data access
+    lineText: "No, I swear I just wanted transparency. But when I saw some folders
+      mysteriously disappear, I thought someone was deleting evidence\u2026 so I
+      pushed for broad access to catch them."
+  nextNodes:
+  - intent: Ask about
+    topic: Jordan behavior
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Ask about
+    topic: Project Phoenix
+    nextNode: {fileID: 11400000, guid: 82840c85ccb707649b1829348dbce7c7, type: 2}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Ask about
+    topic: Data access
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Clarify
+    topic: Jordan behavior
+    nextNode: {fileID: 11400000}
+    requiredTrust: 5
+    trustDelta: 0
+  - intent: Clarify
+    topic: Project Phoenix
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Clarify
+    topic: Data access
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Challenge
+    topic: Jordan behavior
+    nextNode: {fileID: 11400000, guid: 82840c85ccb707649b1829348dbce7c7, type: 2}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Challenge
+    topic: Project Phoenix
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 5
+  - intent: Challenge
+    topic: Data access
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 5

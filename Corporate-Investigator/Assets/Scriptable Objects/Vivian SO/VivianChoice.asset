@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8579184444aedc94abf3daf5e8d2c97b, type: 3}
+  m_Name: VivianChoice
+  m_EditorClassIdentifier: 
+  nodeID: 
+  intentOptions:
+  - Accuse
+  topicOptions:
+  - Jordan Cole
+  - Avery Kane
+  - RivenCore
+  playerLines:
+  - intent: Accuse
+    topic: Jordan Cole
+    lineText: Jordan did it, he was in charge of the department, it falls on his
+      shoulders.
+  - intent: Accuse
+    topic: Avery Kane
+    lineText: 'Avery did it, she didn''t ensure the security of the data. '
+  - intent: Accuse
+    topic: RivenCore
+    lineText: 'You have self-sabotoged yourselves. Don''t blame your employees, fix
+      your security and stop storing private information in an unsecured database. '
+  npcResponses:
+  - intent: Accuse
+    topic: Jordan Cole
+    lineText: 'Really? Well, if you''re sure. '
+  - intent: Accuse
+    topic: Avery Kane
+    lineText: Makes sense, she never double-checks things.
+  - intent: Accuse
+    topic: RivenCore
+    lineText: Wow. Where did we even hire you from? You're awful.
+  nextNodes:
+  - intent: Accuse
+    topic: Jordan Cole
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Accuse
+    topic: Avery Kane
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0
+  - intent: Accuse
+    topic: RivenCore
+    nextNode: {fileID: 11400000}
+    requiredTrust: 0
+    trustDelta: 0
